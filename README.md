@@ -1,7 +1,9 @@
 一个方向，你能否改变世界？
 
 先来看看效果图：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190322142823783.gif#pic_center)
+
 由于 Pay 的效果图被屏蔽，这里以刷文章的方式呈上。
 
 注意：打开「某度」，输入地址，浏览，点击广告等操作都是手机自动完成，非人为手指控制，同时手机非 Root 非无障碍并没有连接 usb。
@@ -18,6 +20,7 @@
 答案是肯定的，虽然效率低了点，依旧是一种解决方案。说好的长话短说，这话又说多了。
 
 ### 实践
+
 大家都知道 [Android 调试桥 (adb)](https://developer.android.com/studio/command-line/adb.html) 是一个通用命令行工具，其允许您与模拟器实例或连接的 Android 设备进行通信。它可为各种设备操作提供便利，如安装和调试应用，并提供对 Unix shell（可用来在模拟器或连接的设备上运行各种命令）的访问。
 
 比如模拟按键点击：
@@ -48,6 +51,7 @@
 66 表示回车，4 表示返回键。还有常见的 <font color=#606C8F>adb install</font> ，<font color=#606C8F>adb push</font> 录屏截图等等。想查看更多 adb 命令，请链接 [awesome-adb](https://github.com/mzlogin/awesome-adb)。好了，具体看案例。
 
 #### 「某度」自动浏览文章
+
 「某度」自动浏览文章为了以下几步：
 
  1. 打开「某度」app
@@ -70,8 +74,12 @@
 	adb shell am start -n com.tencent.mm/.ui.LauncherUI
 ```
 
-表示打开「微信」主界面。参数 <font color=#606C8F>com.tencent.mm</font> 表示微信包名 <font color=#606C8F>.ui.LauncherUI</font> 表示打开的 Activity 的名称。查看当前界面 Activity 名称的方式有许多，这里推荐 [android-TopActivity](https://github.com/109021017/android-TopActivity)。如下图左上角：
+表示打开「微信」主界面。参数 <font color=#606C8F>com.tencent.mm</font> 表示微信包名 <font color=#606C8F>.ui.LauncherUI</font> 表示打开的 Activity 的名称。查看当前界面 Activity 名称的方式有许多，这里推荐 [android-TopActivity](https://github.com/109021017/android-TopActivity)。
+
+如下图左上角：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190321145829920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI1NTEzNTA=,size_16,color_FFFFFF,t_70)
+
 获取到「某度」的包名与主界面的名称为，<font color=#606C8F>com.baidu.searchbox</font> 与 <font color=#606C8F>.MainActivity </font>，那么打开「某度」的 adb 命令如下：
 
 ```java

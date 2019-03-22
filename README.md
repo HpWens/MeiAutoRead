@@ -213,7 +213,9 @@ D:\AndroidSpace\app_process-shell-use\app\src\main\java\shellService>javac -enco
 ```
 
 首先 cd 到 java 目录，然后执行 javac 命令。注意：指定编码格式为 UTF-8 ，不然中文乱码会导致编译不通过。编译过的目录如下图：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190322111749455.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI1NTEzNTA=,size_16,color_FFFFFF,t_70)
+
 细节二，多个 `.class` 文件生成 `.dex` 文件
 
 ```java
@@ -223,7 +225,9 @@ D:\AndroidSpace\app_process-shell-use\app\src\main\java>dx --dex --output=D:\hel
 ```
 
 注意，首先需要 cd 到 java 目录，不然会提示类文件找不到，然后通过 dx --dex 命令生成 .dex 文件，所生成的所有 .class 文件都需要加到命令中。生成的 .dex 文件如下图：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190322113404466.jpg)
+
 细节三，app_process 运行 java 程序：
 
 ```java
@@ -277,7 +281,9 @@ public class Main {
 ```
 
 手机自动浏览「某度」文章，当这个时候拔去 usb 连接，会提示 `no devices/emulators found` 表明无设备连接，在上文中已经提到，这个时候可以通过 ADB WIFI 连接。
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190322143055490.gif#pic_center)
+
 当然我觉得 ADB WIFI 连接也比较麻烦，如果能一键启动那不更好，那么接下来就需要把 ADB WIFI 的实现原理接入到服务器。这样就能真正的做到「一键启动」。
 
 ### 总结，思考
@@ -292,7 +298,9 @@ https://github.com/HpWens/MeiWidgetView
 https://github.com/HpWens/MeiAutoRead
 
 如果对「自动操作」感兴趣的小伙伴，点击下面二维码，关注：控件人生
+
 ![qrcode_for_gh_232b5a56667d_258.jpg](https://upload-images.jianshu.io/upload_images/2258857-27f4e8c3d79e6204.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240#pic_center)
+
 <center > 扫一扫 关注我的公众号 </center> 
 <center> 想了解更多自动操作的动态吗~ </center>
 

@@ -119,7 +119,9 @@
 起点 y 坐标 1800 与结束点 y 坐标 0 ，相差越大滑动越大，在每个机型上需要调整，同时滑动到广告出现在屏幕内的次数可能也不一样。具体请在真机上模拟调整。
 
 第六步，点击推荐广告，同上获取到广告区域的坐标点：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190321170751932.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI1NTEzNTA=,size_16,color_FFFFFF,t_70)
+
 对应的 adb 命令如下：
 
 ```java
@@ -201,7 +203,9 @@ pause
 大家想一想，如果我把 Java 程序部署到远程服务器上，那么我能随时随地都可以建立 socket ，从而控制手机自动完成想做的事情。
 
 还得再次感谢 `gtf` 同学分享了一个简单的 socket 程序，亲测后的效果图如下：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190322103313156.gif)
+
 在通过 app_process 在环境下运行 java 程序有以下几个细节：
 
 细节一，通过 `javac ` 运行多个 `.java` 文件：
